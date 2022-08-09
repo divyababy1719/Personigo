@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Suite">
+  <test  name="Test-1">
+  <parameter name="Browser" value="chrome"></parameter>
+    <classes>
+      <class name="com.crm.Mobicentrum.CampaignTest.CreateCampaignTest">
+      <methods>
+      <exclude name="CreateCampaignWithProduct"></exclude>
+      </methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  <test  name="Test2">
+  <parameter name="Browser" value="Firefox"></parameter>
+    <classes>
+      <class name="com.crm.Mobicentrum.ContactTest.CreateContactTest">
+      <methods>
+      <exclude name="CreateAndDeleteContactTest"></exclude>
+      </methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
